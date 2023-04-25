@@ -4,15 +4,16 @@ const button = document.getElementById('convert-button')
 const select = document.getElementById('currency-select')
 
 
-const valueDolar = 5.3
-const valueEuro = 5.5
-const valueBitCoin = 0.00001
-
+const valueDolar = 5.7
+const valueEuro = 5.6
+const valueBitCoin = 139.65400
 // converter valor do dolar do dia
 const convertValues = () => {
     const inputReais = document.getElementById('input-real').value
     const realValueText = document.getElementById('real-value-text')
     const currencyValueText = document.getElementById('currency-value-text')
+
+    console.log(select.value)
 
 
 
@@ -39,9 +40,9 @@ const convertValues = () => {
     }
     // formatando os valores BitCoin
     if (select.value === 'BitCoin') {
-        currencyValueText.innerHTML = new Intl.NumberFormat('', {
+        currencyValueText.innerHTML = new Intl.NumberFormat('de-DE', {
             style: 'currency',
-            currency: '',
+            currency: 'BTC',
         }).format(inputReais / valueBitCoin)
     }
     // if (inputReais == '') {
