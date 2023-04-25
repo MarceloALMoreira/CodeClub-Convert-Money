@@ -26,34 +26,35 @@
             </label>
             <label>
                 Converter <b>Para</b>
-                <select>
-                    <option value="">US$ Dólar Americano</option>
-                    <option value="">€ Euro</option>
+                <select id="currency-select">
+                    <option>US$ Dólar Americano</option>
+                    <option>€ Euro</option>
+                    <option>BitCoin</option>
                 </select>
             </label>
             <label>
                 Valor
                 <input id="input-real" type="text" placeholder="R$ 10.000,00">
             </label>
-            <button id="convert-button" onclick="" type="button">Converter</button>
+            <button id="convert-button" type="button">Converter</button>
             <section>
                 <div class="currency-container">
                     <img src="../assets/brasil 2.svg" alt="br">
                     <p class="currency-name">Real</p>
-                    <p class="currency-value">R$ 10.000,00</p>
+                    <p class="currency-value" id="real-value-text">R$ 10.000,00</p>
                 </div>
                 <img class="arrow-img" src="../assets/arrow.svg" alt="arrow">
 
                 <div class="currency-container">
-                    <img src="../assets/eua 1.svg" alt="eua">
-                    <p class="currency-name">Dólar Americano</p>
-                    <p class="currency-value">US$ 2.000,00</p>
+                    <img src="../assets/eua.svg" alt="eua" id="currency-img">
+                    <p class="currency-name" id="currency-name">Dólar Americano</p>
+                    <p class="currency-value" id="currency-value-text">US$ 2.000,00</p>
                 </div>
             </section>
         </main>
 
     </div>
 </body>
-<script src="js/script.js"></script>
+<script src="./js/script.js"></script>
 
 </html>
